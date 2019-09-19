@@ -4,7 +4,7 @@ import json
 import giphy_client
 from giphy_client.rest import ApiException
 import urllib.request,urllib.parse,urllib.error
-import pprint
+
 
 app = Flask(__name__)
 
