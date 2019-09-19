@@ -21,14 +21,15 @@ def index():
     if r.status_code == 200:
         results = r.json()
         gifs = results['results']
-        # trending_gifs = json.loads(r.content)
     else:
         gifs = None
 
     # TODO: Use the '.json()' function to get the JSON of the returned response
     # object
     
-    # results = r.json()
+    # data = r.json()
+    # print(data)
+    
     
     # TODO: Using dictionary notation, get the 'results' field of the JSON,
     # which contains the GIFs as a list
@@ -36,10 +37,7 @@ def index():
     # TODO: Render the 'index.html' template, passing the list of gifs as a
     # named parameter called 'gifs'
 
-
     return render_template("index.html", gifs=gifs)
-
-
 
 if __name__ == '__main__':
     app.run(debug=True)
