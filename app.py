@@ -26,10 +26,10 @@ app = Flask(__name__)
 #         urllib.request.urlretrieve(url, str(i)+'.gif') #Downloads the gif file.
 # else:
 #     top_10_gifs = None
-@app.route('/', methods=['GET','POST'])
-@app.route('/index', methods=['GET','POST'])
+
+@app.route('/')
+@app.route('/index')
 def index():
-   
     q = request.args.get('query')
     print(q)
     params = {
@@ -40,7 +40,7 @@ def index():
     """Return homepage."""
     # TODO: Extract the query term from url using request.args.get() 
     r = requests.get(
-        "https://api.tenor.com/search",params=params)
+        "https://api.tenor.com/search?",params=params)
 
     
     # TODO: Make 'params' dictionary containing:
