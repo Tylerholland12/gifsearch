@@ -21,19 +21,10 @@ def index():
         'lmt': 10
     }
     """Return homepage."""
-    # TODO: Extract the query term from url using request.args.get() 
+    
     r = requests.get(
         "https://api.tenor.com/search?",params=params)
 
-    
-    # TODO: Make 'params' dictionary containing:
-    # a) the query term, 'q'
-    # b) your API key, 'key'
-    # c) how many GIFs to return, 'limit'
-    
-
-    # TODO: Make an API call to Tenor using the 'requests' library. For 
-    # reference on how to use Tenor, see: 
     # https://tenor.com/gifapi/documentation
     if r.status_code == 200:
         results = r.json()
