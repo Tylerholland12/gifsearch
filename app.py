@@ -10,23 +10,6 @@ import pprint
 
 app = Flask(__name__)
 
-# api_key = 'LE2B769USEX5'
-# gif_limit = 10
-# gif_search_term = 'excited'
-# request_gif = request.get("https://api.tenor.com/v1/search?q=%s&key=%s&limit=%s" %(gif_search_term, api_key, gif_limit))
-
-# if request_gif.status_code == 200:
-#     top_10_gifs = json.loads(request_gif.content)
-#     pp = pprint.PrettyPrinter(indent=4)
-#     print(top_10_gifs)
-#     pp.pprint(top_10_gifs) #pretty prints the json file.
-#     for i in range(len(top_10_gifs['results'])):
-#         url = top_10_gifs['results'][i]['media'][0]['gif']['url'] #This is the url from json.
-#         print (url)
-#         urllib.request.urlretrieve(url, str(i)+'.gif') #Downloads the gif file.
-# else:
-#     top_10_gifs = None
-
 @app.route('/')
 @app.route('/index')
 def index():
