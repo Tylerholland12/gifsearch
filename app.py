@@ -5,8 +5,6 @@ import giphy_client
 from giphy_client.rest import ApiException
 import urllib.request,urllib.parse,urllib.error
 import pprint
-# from app import app
-# import unittest
 
 app = Flask(__name__)
 
