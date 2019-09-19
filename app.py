@@ -16,19 +16,15 @@ def index():
     }
     
     r = requests.get(
-        "https://api.tenor.com/search?",params=params)
+        "https://api.tenor.com/v1/search",params=params)
 
     if r.status_code == 200:
         results = r.json()
         gifs = results['results']
+        # print(gifs)
     else:
         gifs = None
-
-    # TODO: Use the '.json()' function to get the JSON of the returned response
-    # object
-    
-    # data = r.json()
-    # print(data)
+        # print(r.status_code)
     
     
     # TODO: Using dictionary notation, get the 'results' field of the JSON,
