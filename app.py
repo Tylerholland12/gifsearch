@@ -1,9 +1,6 @@
 from flask import Flask, render_template, request
 import requests
 import json
-import giphy_client
-from giphy_client.rest import ApiException
-import urllib.request,urllib.parse,urllib.error
 
 
 app = Flask(__name__)
@@ -16,7 +13,7 @@ def index():
     params = {
         'q': q,
         'key': 'LE2B769USEX5',
-        'lmt': 10
+        'lmt': '10'
     }
     """Return homepage."""
     
