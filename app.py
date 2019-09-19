@@ -23,7 +23,6 @@ def index():
     r = requests.get(
         "https://api.tenor.com/search?",params=params)
 
-    # https://tenor.com/gifapi/documentation
     if r.status_code == 200:
         results = r.json()
         gifs = results['results']
