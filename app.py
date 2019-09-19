@@ -2,7 +2,6 @@ from flask import Flask, render_template, request
 import requests
 import json
 
-
 app = Flask(__name__)
 
 @app.route('/')
@@ -15,7 +14,6 @@ def index():
         'key': 'LE2B769USEX5',
         'lmt': '10'
     }
-    """Return homepage."""
     
     r = requests.get(
         "https://api.tenor.com/search?",params=params)
@@ -29,6 +27,8 @@ def index():
 
     # TODO: Use the '.json()' function to get the JSON of the returned response
     # object
+    
+    # results = r.json()
     
     # TODO: Using dictionary notation, get the 'results' field of the JSON,
     # which contains the GIFs as a list
