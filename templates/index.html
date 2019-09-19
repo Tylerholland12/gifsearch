@@ -8,11 +8,11 @@
  </form>
 
 
-{% if gif_user %}
+{% if gifs %}
     The gif you chose is:
     <ul>
-        {% for gif_search in index %}
-            <li>{{ gif_search }}</li>
+        {% for gif in gifs %}
+            <li>{{ gif }}</li>
         {% endfor %}
     </ul>
 {% else %}

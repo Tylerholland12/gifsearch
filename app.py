@@ -26,7 +26,6 @@ def index():
         gifs = None
         # print(r.status_code)
     
-    
     # TODO: Using dictionary notation, get the 'results' field of the JSON,
     # which contains the GIFs as a list
 
