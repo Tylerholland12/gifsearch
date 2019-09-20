@@ -4,6 +4,7 @@ import json
 
 app = Flask(__name__)
 
+
 @app.route('/')
 @app.route('/index')
 def index():
@@ -21,16 +22,9 @@ def index():
     if r.status_code == 200:
         results = r.json()
         gifs = results['results']
-        # print(gifs)
+       
     else:
         gifs = None
-        # print(r.status_code)
-    
-    # TODO: Using dictionary notation, get the 'results' field of the JSON,
-    # which contains the GIFs as a list
-
-    # TODO: Render the 'index.html' template, passing the list of gifs as a
-    # named parameter called 'gifs'
 
     return render_template("index.html", gifs=gifs)
 
