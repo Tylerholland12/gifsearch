@@ -12,7 +12,7 @@ def index():
     params = {
         'q': q,
         'key': 'LE2B769USEX5',
-        'lmt': '10'
+        'lmt': '5'
     }
     
     r = requests.get(
